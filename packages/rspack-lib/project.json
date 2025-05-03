@@ -1,0 +1,20 @@
+{
+  "name": "rspack-lib",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/rspack-lib/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/rspack:rspack",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "packages/rspack-lib/dist",
+        "main": "packages/rspack-lib/src/index.ts",
+        "tsConfig": "packages/rspack-lib/tsconfig.lib.json",
+        "rspackConfig": "packages/rspack-lib/rspack.config.mjs",
+        "skipTypeChecking": false
+      }
+    }
+  },
+  "tags": []
+}

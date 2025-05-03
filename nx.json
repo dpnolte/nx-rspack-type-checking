@@ -23,6 +23,32 @@
           "buildDepsName": "build-deps",
           "watchDepsName": "watch-deps"
         }
+      },
+      "exclude": [
+        "rspac-lib/*",
+        "packages/rspack-lib/*"
+      ]
+    },
+    {
+      "plugin": "@nx/js/typescript",
+      "include": [
+        "rspac-lib/*",
+        "packages/rspack-lib/*"
+      ],
+      "options": {
+        "typecheck": {
+          "targetName": "typecheck"
+        }
+      }
+    },
+    {
+      "plugin": "@nx/rspack/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "serveTargetName": "serve",
+        "previewTargetName": "preview",
+        "buildDepsTargetName": "build-deps",
+        "watchDepsTargetName": "watch-deps"
       }
     }
   ]
